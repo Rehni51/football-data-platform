@@ -1,0 +1,26 @@
+# Environnement Python
+.venv/
+__pycache__/
+*.pyc
+
+# Variables d'environnement et secrets
+.env
+.env.*
+
+# Cache des tests et outils
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Fichiers temporaires
+*.log
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Paramètres locaux VS Code
+.vscode/
+
+# Données locales
+data/
