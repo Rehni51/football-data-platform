@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: fct_matches
+    description: >
+      Table de faits des rencontres FFF.
+      Une ligne représente un match.
+
+    columns:
+      - name: match_id
+        description: "Identifiant unique de la rencontre"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: competition_id
+        description: "Identifiant de la compétition"
+        data_tests:
+          - not_null
+
+      - name: score_outcome
+        description: "Résultat déduit des scores renseignés"
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - home_win
+                  - away_win
+                  - draw

@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: fff
+    description: "Données FFF chargées par nos pipelines Python"
+    schema: landing
+
+    tables:
+      - name: matches
+        description: "Rencontres FFF stockées au format JSONB"

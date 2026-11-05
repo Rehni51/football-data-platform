@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_fff_matches
+    description: "Rencontres FFF nettoyées et typées"
+
+    columns:
+      - name: match_id
+        description: "Identifiant unique du match"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: competition_id
+        description: "Identifiant de la compétition FFF"
+        data_tests:
+          - not_null
+
+      - name: season
+        description: "Année de début de la saison sportive"
+        data_tests:
+          - not_null

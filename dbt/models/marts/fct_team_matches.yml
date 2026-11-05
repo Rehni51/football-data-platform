@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: fct_team_matches
+    description: >
+      Participations des équipes aux rencontres FFF.
+      Une ligne par équipe et par match.
+
+    columns:
+      - name: team_match_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: match_id
+        data_tests:
+          - not_null
+
+      - name: venue
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - home
+                  - away
+
+      - name: result_from_score
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - win
+                  - loss
+                  - draw
